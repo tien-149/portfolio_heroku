@@ -1,0 +1,120 @@
+.contact-page{
+    display:flex;
+
+}
+
+h1{
+    font-family: $main-font;
+    text-align: center;
+    color:$main-color;
+    margin-top:70px;
+}
+#contactCon{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+
+    input{
+        border:none;
+        background-color:#f2f8f4;
+        border-bottom: 0.2px solid $main-color;
+        font-family: $main-font, Arial, Helvetica, sans-serif;
+        padding:10px;
+        color: #635d03;
+    }
+    .contact-text{
+        display: flex;
+        flex-direction: column;
+        font-family: $main-font;
+        color: $main-color;
+        font-size: 16px;
+        padding:25px;
+
+        #email{
+            padding:15px;
+        }
+        #name{
+            padding:15px;    
+        }
+        #message{
+            padding:15px;
+        }
+        textarea{
+            border:none;
+            background-color:#f2f8f4;
+            border-bottom: 0.2px solid $main-color;
+            font-family: $main-font, Arial, Helvetica, sans-serif;
+            padding:10px;
+            color: #635d03;
+        }
+
+    }
+    ::placeholder{color:#a5c2af;}
+    button{
+        display: flex;
+        background-color: #f2f8f4;
+        border-radius: 5px;
+        border: 1px solid $main-color;
+        color:$main-color;
+        padding:12px;
+        text-align: center;
+        font-family: $main-font;
+        font-size:15px;
+        justify-content: center;
+        margin: 30px;
+    }
+    
+}
+#contact-page-img{
+    img{
+    display:none;
+    }
+}
+//////Desktop Version//////
+@media screen and (min-width: 1024px){
+    #contactCon{
+        width:550px;
+        margin-top:80px;
+        margin-bottom:90px;
+        margin-left:60px;
+
+        .contact-text{
+            font-size:20px;
+            padding:30px;
+        }
+        button{
+            font-size:18px;
+        }
+    }
+    #contact-page-img{
+        img{
+        display:flex;
+         position: relative;
+        width:500px;
+        height:700px;
+        margin:0 auto;
+        padding:20px;
+        
+        }
+        .alien-mail{
+            -webkit-animation-name: mailman; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: mailman;
+            animation-duration: 2s;
+        }
+        @-webkit-keyframes mailman {
+            0%   { left:1000px; top:0px;}
+            100%  {left:0px; top:0px;}
+
+          }
+          
+          /* Standard syntax */
+          @keyframes mailman {
+            0%   {left:1000px; top:0px;}
+            100%  { left:0px; top:0px;}
+
+          }
+        
+    }
+    
+}
